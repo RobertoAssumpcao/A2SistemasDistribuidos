@@ -8,12 +8,17 @@ public class ServicoDeMensagens extends UnicastRemoteObject implements Mensagem_
     }
 
     public String getMensagem() throws RemoteException {
-        System.out.println("Chamou o metodo GET: " + this.mensagem);
+        System.out.println("Chamou o método GET: " + this.mensagem);
         return this.mensagem;
     }
 
     public void setMensagem(String mensagem) throws RemoteException {
-        System.out.println("Chamou o metodo SET: " + mensagem);
+        System.out.println("Chamou o método SET: " + mensagem);
         this.mensagem = mensagem;
+    }
+
+    public void apagarMensagem() throws RemoteException {
+        System.out.println("Mensagem apagada.");
+        this.mensagem = "Não há nenhuma mensagem";
     }
 }
