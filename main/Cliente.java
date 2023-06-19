@@ -46,7 +46,7 @@ public class Cliente {
                 }
             }
 
-            String mensagem = "Tema: " + tema + "\nData: " + dateFormat.format(data) + "\nCódigo: " + codigo;
+            String mensagem = "Tema: " + obj.criptografar(tema) + "\nData: " + dateFormat.format(data) + "\nCódigo: " + obj.criptografar(codigo);
             obj.setMensagem(mensagem);
 
             JOptionPane.showMessageDialog(null, "Ingresso enviado com sucesso!");

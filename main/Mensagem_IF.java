@@ -7,4 +7,8 @@ public interface Mensagem_IF extends Remote {
     public void setMensagem(String mensagem) throws RemoteException;
 
     public void apagarMensagem() throws RemoteException;
+
+    public String criptografar( String a) throws java.rmi.RemoteException;
+    
+    public String descriptografar ( String a) throws java.rmi.RemoteException;
 }
